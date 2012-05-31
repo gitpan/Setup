@@ -1,5 +1,5 @@
 ---
-abstract: 'Setup module'
+abstract: 'Specification for setup module'
 author:
   - 'Steven Haryanto <stevenharyanto@gmail.com>'
 build_requires:
@@ -14,8 +14,9 @@ meta-spec:
   version: 1.4
 name: Setup
 requires:
-  Rinci: 1.1.0
+  Riap: 1.1.13
+  Rinci: 1.1.17
 resources:
   homepage: http://search.cpan.org/dist/Setup/
   repository: http://github.com/sharyanto/perl-Setup
-version: 1.0.0
+version: 1.0.1

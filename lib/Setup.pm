@@ -1,20 +1,20 @@
 package Setup;
 
-our $VERSION = '1.0.0'; # VERSION
+our $VERSION = '1.0.1'; # VERSION
 
 1;
-# ABSTRACT: Setup module
+# ABSTRACT: Specification for setup module
 
 __END__
 =pod
 
 =head1 NAME
 
-Setup - Setup module
+Setup - Specification for setup module
 
 =head1 VERSION
 
-version 1.0.0
+version 1.0.1
 
 =head1 AUTHOR
 
