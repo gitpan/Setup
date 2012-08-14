@@ -1,6 +1,6 @@
 package Setup; # to make podweaver happy
 
-our $VERSION = '1.0.1'; # VERSION
+our $VERSION = '1.0.2'; # VERSION
 
 1;
 # ABSTRACT: Specification for setup module
@@ -15,7 +15,7 @@ Setup - Specification for setup module
 
 =head1 VERSION
 
-version 1.0.1
+version 1.0.2
 
 =head1 SPECIFICATION VERSION
 
@@ -30,27 +30,19 @@ functions are normal Perl subroutines, typically named with C<setup_> prefix
 well, setting up stuffs, like software installation, system setup, or
 configuration management.
 
-Setup functions must support these features: idempotency (useful for
-configuration management), transaction, undo/redo (useful for uninstallation of
-software), and dry-run/simulation mode (useful for debugging).
+Setup functions must have metadata, as specified in L<Rinci> specification.
 
-Setup functions must follow L<Rinci> specification, since Rinci already
-specifies all of these functionalities. Setup functions should also be written
-with the helper L<Perinci::Sub::Undoable>, to make all Setup functions more
-consistent.
+Setup functions must support transactions, as described in
+L<Rinci::function::Transaction>.
 
-As an additional note, aside from idempotency, the functions must also check for
-initial/original condition. There could be various state changes between the
-time of do and undo; a file can be deleted or modified by other processes. The
-undo must be flexible enough so it can reverse whatever state changes the
-previous do phase did whenever it can, but not disrupt other processes' changes.
+Setup functions should also be written with the helper module
+L<Perinci::Sub::Gen::Undoable>, to make all Setup functions more consistent.
 
-=head1 SEE ALSO
-
-L<Rinci> (specifically L<Rinci::function::Undo> and
-L<Rinci::function::Transaction>).
-
-L<Riap> (specifically L<Riap::Transaction>).
+Aside from idempotency, setup functions must also check for acceptable initial
+condition. There could be various state changes between the time of do and undo
+action; a file can be deleted or modified by other processes. The undo action
+must be flexible enough so it can reverse whatever state changes the previous do
+phase did whenever it can, but not disrupt other processes' changes.
 
 =head1 AUTHOR
 
@@ -62,6 +54,46 @@ This software is copyright (c) 2012 by Steven Haryanto.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
+
+=head1 CHANGES
+
+=head2 Version 1.0.2 (2012-08-14)
+
+=over 4
+
+=item *
+
+No functional changes. Simplify description. Follow Rinci 1.1.23.
+
+=back
+
+=head2 Version 1.0.1 (2012-05-31)
+
+=over 4
+
+=item *
+
+Simplify description, as most functionality is now already described in
+
+=item *
+
+more detail by Rinci 1.1.17+ and Riap 1.1.13+'s transaction/undo
+
+=item *
+
+protocol.
+
+=back
+
+=head2 Version 1.0.0 (2012-03-28)
+
+=over 4
+
+=item *
+
+First release, split from Setup-File.
+
+=back
 
 =cut
 

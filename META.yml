@@ -14,9 +14,8 @@ meta-spec:
   version: 1.4
 name: Setup
 requires:
-  Riap: 1.1.13
-  Rinci: 1.1.17
+  Rinci: v1.1.23
 resources:
   homepage: http://search.cpan.org/dist/Setup/
   repository: http://github.com/sharyanto/perl-Setup
-version: 1.0.1
+version: 1.0.2
