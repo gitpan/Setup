@@ -17,7 +17,7 @@ my %module_build_args = (
     "Steven Haryanto <stevenharyanto\@gmail.com>"
   ],
   "dist_name" => "Setup",
-  "dist_version" => "1.0.2",
+  "dist_version" => "1.0.3",
   "license" => "perl",
   "module_name" => "Setup",
   "recommends" => {},

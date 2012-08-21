@@ -1,6 +1,6 @@
 package Setup;
 
-our $VERSION = '1.0.2'; # VERSION
+our $VERSION = '1.0.3'; # VERSION
 
 1;
 # ABSTRACT: Specification for setup module
@@ -14,7 +14,7 @@ Setup - Specification for setup module
 
 =head1 VERSION
 
-version 1.0.2
+version 1.0.3
 
 =head1 AUTHOR
 
